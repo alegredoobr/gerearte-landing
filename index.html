@@ -124,7 +124,7 @@
   /* TRANSPARENCY */
   .transparency-grid{display:grid; gap:48px; align-items:center;}
   @media(min-width:1024px){ .transparency-grid{grid-template-columns:1fr 1fr;} }
-  .checker{border-radius:16px; border:1px solid var(--border); padding:36px; background-image:linear-gradient(45deg,#1f1f22 25%,transparent 25%),linear-gradient(-45deg,#1f1f22 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#1f1f22 75%),linear-gradient(-45deg,transparent 75%,#1f1f22 75%); background-size:24px 24px; background-position:0 0,0 12px,12px -12px,-12px 0; background-color:var(--surface); position:relative; max-width:380px; margin:0 auto;}
+  .checker{border-radius:16px; border:1px solid var(--border); padding:36px; background-image:linear-gradient(45deg,#1f1f22 25%,transparent 25%),linear-gradient(-45deg,#1f1f22 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#1f1f22 75%),linear-gradient(-45deg,transparent 75%,#1f1f22 75%); background-size:24px 24px; background-position:0 0,0 12px,12px -12px,-12px 0; background-color:var(--surface); position:relative; width:min(380px, 100%); margin:0 auto;}
   .checker .badge-float{position:absolute; top:-16px; right:-16px; background:var(--orange); color:#0a0a0b; font-family:var(--mono); font-size:11px; font-weight:700; padding:6px 14px; border-radius:999px; box-shadow:0 8px 20px -6px rgba(0,0,0,.5);}
   .list-check{margin-top:26px; display:flex; flex-direction:column; gap:12px; font-family:var(--mono); font-size:14px; color:var(--text-muted);}
   .list-check li{display:flex; align-items:center; gap:10px; list-style:none;}
@@ -259,12 +259,11 @@
           <div class="console-body">
             <div class="console-prompt" id="typingPrompt"><span style="color:var(--text-faint);">$ </span><span class="cmd" id="typingText"></span><span class="cursor"></span></div>
             <div class="console-imgs">
-              <div class="ph glow" style="flex:1.1; background:linear-gradient(135deg,#ff5c1a,#7a1f8a);">
-                <span class="lbl">PLACEHOLDER · hero-art</span>
+              <div class="ph glow" style="flex:1.1; background-color:var(--surface); background-image:url('images/wolf-howl.jpg'); background-size:cover; background-position:center;">
               </div>
               <div class="stack">
-                <div class="ph" style="flex:1; background:linear-gradient(135deg,#3a3a3f,#ff5c1a);"><span class="lbl">PLACEHOLDER · realista</span></div>
-                <div class="ph" style="flex:1; background:linear-gradient(135deg,#ff5c1a,#e63bd6);"><span class="lbl">PLACEHOLDER · anime</span></div>
+                <div class="ph" style="flex:1; background-color:var(--surface); background-image:url('images/jaguar-realista.jpg'); background-size:cover; background-position:center;"></div>
+                <div class="ph" style="flex:1; background-color:var(--surface); background-image:url('images/samurai-anime.jpg'); background-size:cover; background-position:center;"></div>
               </div>
             </div>
             <div class="console-footer">
@@ -333,38 +332,32 @@
       </div>
       <div class="styles-grid">
         <div class="reveal style-card">
-          <span class="lbl-top">PLACEHOLDER · realista</span>
-          <div class="art" style="background:linear-gradient(135deg,#3a3a3f,#ff5c1a);"></div>
+          <div class="art" style="background-color:var(--surface); background-image:url('images/jaguar-realista.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
           <div class="info"><h3>Realista</h3><p>Detalhes e texturas com aparência fotográfica.</p></div>
         </div>
         <div class="reveal style-card">
-          <span class="lbl-top">PLACEHOLDER · anime</span>
-          <div class="art" style="background:linear-gradient(135deg,#ff5c1a,#e63bd6);"></div>
+          <div class="art" style="background-color:var(--surface); background-image:url('images/samurai-anime.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
           <div class="info"><h3>Anime</h3><p>Traços marcantes inspirados na estética anime.</p></div>
         </div>
         <div class="reveal style-card">
-          <span class="lbl-top">PLACEHOLDER · desenho</span>
-          <div class="art" style="background:linear-gradient(135deg,#2a2a2e,#ffb020);"></div>
+          <div class="art" style="background-color:var(--surface); background-image:url('images/skull-desenho.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
           <div class="info"><h3>Desenho</h3><p>Linhas e traçados com aparência desenhada à mão.</p></div>
         </div>
         <div class="reveal style-card">
-          <span class="lbl-top">PLACEHOLDER · ilustração</span>
-          <div class="art" style="background:linear-gradient(135deg,#ff8a3d,#1f3a8a);"></div>
+          <div class="art" style="background-color:var(--surface); background-image:url('images/eagle-fire-ilustracao.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
           <div class="info"><h3>Ilustração</h3><p>Composições ilustrativas com cores vibrantes.</p></div>
         </div>
         <div class="reveal style-card">
-          <span class="lbl-top">PLACEHOLDER · 3d</span>
-          <div class="art" style="background:linear-gradient(135deg,#7a1f1f,#ff5c1a);"></div>
+          <div class="art" style="background-color:var(--surface); background-image:url('images/tiger-3d.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
           <div class="info"><h3>3D</h3><p>Volume e profundidade em renderização 3D.</p></div>
         </div>
         <div class="reveal style-card">
-          <span class="lbl-top">PLACEHOLDER · minimalista</span>
-          <div class="art" style="background:linear-gradient(135deg,#1a1a1c,#3a3a3f);"></div>
+          <div class="art" style="background-color:var(--surface); background-image:url('images/lotus-minimalista.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
           <div class="info"><h3>Minimalista</h3><p>Formas simples e limpas, direto ao ponto.</p></div>
         </div>
@@ -381,12 +374,12 @@
         <p style="margin-top:12px; color:var(--text-muted);">Exemplos de artes geradas no GereArtes, pensadas para estampas e produtos personalizados.</p>
       </div>
       <div class="gallery">
-        <div class="reveal item" style="aspect-ratio:3/4; background:linear-gradient(135deg,#ff5c1a,#ffb020);"><span class="lbl-top">PLACEHOLDER · gallery-01</span></div>
-        <div class="reveal item" style="aspect-ratio:1/1; background:linear-gradient(135deg,#2a2a2e,#ff5c1a);"><span class="lbl-top">PLACEHOLDER · gallery-02</span></div>
-        <div class="reveal item" style="aspect-ratio:1/1; background:linear-gradient(135deg,#7a1f8a,#ff5c1a);"><span class="lbl-top">PLACEHOLDER · gallery-03</span></div>
-        <div class="reveal item" style="aspect-ratio:3/4; background:linear-gradient(135deg,#ff8a3d,#111113);"><span class="lbl-top">PLACEHOLDER · gallery-04</span></div>
-        <div class="reveal item" style="aspect-ratio:1/1; background:linear-gradient(135deg,#1f3a8a,#ff5c1a);"><span class="lbl-top">PLACEHOLDER · gallery-05</span></div>
-        <div class="reveal item" style="aspect-ratio:1/1; background:linear-gradient(135deg,#ff5c1a,#3a3a3f);"><span class="lbl-top">PLACEHOLDER · gallery-06</span></div>
+        <div class="reveal item" style="aspect-ratio:3/4; background-color:var(--surface); background-image:url('images/snake-rose-galeria.jpg'); background-size:cover; background-position:center;"></div>
+        <div class="reveal item" style="aspect-ratio:1/1; background-color:var(--surface); background-image:url('images/bear-galeria.jpg'); background-size:cover; background-position:center;"></div>
+        <div class="reveal item" style="aspect-ratio:1/1; background-color:var(--surface); background-image:url('images/raven-galeria.jpg'); background-size:cover; background-position:center;"></div>
+        <div class="reveal item" style="aspect-ratio:3/4; background-color:var(--surface); background-image:url('images/dragon-galeria.jpg'); background-size:cover; background-position:center;"></div>
+        <div class="reveal item" style="aspect-ratio:1/1; background-color:var(--surface); background-image:url('images/eagle-fire-ilustracao.jpg'); background-size:cover; background-position:center;"></div>
+        <div class="reveal item" style="aspect-ratio:1/1; background-color:var(--surface); background-image:url('images/tiger-3d.jpg'); background-size:cover; background-position:center;"></div>
       </div>
     </div>
   </section>
@@ -406,8 +399,7 @@
       </div>
       <div class="reveal checker">
         <span class="badge-float">fundo transparente</span>
-        <div style="aspect-ratio:1/1; border-radius:12px; overflow:hidden; background:linear-gradient(135deg,#ff5c1a,#7a1f8a); position:relative;">
-          <span class="lbl-top" style="position:absolute;">PLACEHOLDER · hero-art</span>
+        <div style="width:100%; aspect-ratio:1/1; border-radius:12px; overflow:hidden; background-image:url('images/eagle-transparente.png'); background-size:contain; background-repeat:no-repeat; background-position:center; position:relative;">
         </div>
       </div>
     </div>
