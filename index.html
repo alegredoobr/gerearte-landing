@@ -106,10 +106,11 @@
   /* STYLES */
   .auto-banner{margin-top:36px; display:flex; flex-wrap:wrap; align-items:center; gap:16px; border-radius:16px; border:1px solid rgba(255,92,26,.25); background:rgba(255,92,26,.06); padding:20px 24px;}
   .styles-grid{margin-top:30px; display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  @media(min-width:1024px){ .styles-grid{grid-template-columns:repeat(3,1fr);} }
+  @media(max-width:1023px){ .styles-grid > *:nth-child(5){grid-column:1 / -1;} }
+  @media(min-width:1024px){ .styles-grid{grid-template-columns:repeat(5,1fr);} }
   .style-card{position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--border-soft); background:var(--surface); aspect-ratio:4/5;}
   .style-card .art{position:absolute; inset:0;}
-  .style-card .scrim{position:absolute; inset:0; background:linear-gradient(to top, var(--bg) 0%, rgba(10,10,11,.25) 55%, transparent 100%);}
+  .style-card .scrim{position:absolute; inset:0; background:linear-gradient(to top, var(--bg) 0%, var(--bg) 18%, rgba(10,10,11,.9) 45%, rgba(10,10,11,.35) 70%, transparent 100%);}
   .style-card .info{position:absolute; left:0; right:0; bottom:0; padding:16px;}
   .style-card .info h3{font-size:16px;}
   .style-card .info p{margin-top:4px; font-size:12px; color:var(--text-muted);}
@@ -303,17 +304,17 @@
           <span class="num">01</span>
           <h3>Descreva sua ideia</h3>
           <p>Escreva o que você imagina, do jeito que vier à cabeça.</p>
-          <p class="quote">"Um lobo uivando para a lua, estilo realista, composição para camiseta."</p>
+          <p class="quote">"Um lobo uivando para a lua, composição para camiseta."</p>
         </div>
         <div class="reveal step">
           <span class="num">02</span>
           <h3>Escolha o estilo</h3>
-          <p>Selecione entre Realista, Anime, Desenho, Ilustração, 3D, Minimalista ou deixe no Automático.</p>
+          <p>Deixe no Automático ou escolha entre Streetwear, Desenho, Anime, 3D e Grafite.</p>
         </div>
         <div class="reveal step">
           <span class="num">03</span>
           <h3>Gere sua arte</h3>
-          <p>A Inteligência Artificial cria a arte com fundo transparente, pronta para estampar.</p>
+          <p>A Inteligência Artificial transforma sua ideia em uma composição pensada para estampa.</p>
         </div>
       </div>
     </div>
@@ -328,38 +329,33 @@
       </div>
       <div class="reveal auto-banner">
         <span class="badge badge-orange" style="white-space:nowrap;">Recomendado para começar</span>
-        <p style="color:var(--text-muted);"><strong style="color:var(--text);">Automático:</strong> a IA escolhe a melhor abordagem para a sua ideia. Escolha um estilo específico abaixo quando quiser mais controle.</p>
+        <p style="color:var(--text-muted);"><strong style="color:var(--text);">Automático:</strong> descreva sua ideia e o GereArtes interpreta o pedido para escolher a melhor direção visual. Se você quiser mais controle, selecione um estilo específico.</p>
       </div>
       <div class="styles-grid">
         <div class="reveal style-card">
-          <div class="art" style="background-color:var(--surface); background-image:url('images/jaguar-realista.jpg'); background-size:cover; background-position:center;"></div>
+          <div class="art" style="background-color:var(--surface); background-image:url('images/bear-galeria.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
-          <div class="info"><h3>Realista</h3><p>Detalhes e texturas com aparência fotográfica.</p></div>
-        </div>
-        <div class="reveal style-card">
-          <div class="art" style="background-color:var(--surface); background-image:url('images/samurai-anime.jpg'); background-size:cover; background-position:center;"></div>
-          <div class="scrim"></div>
-          <div class="info"><h3>Anime</h3><p>Traços marcantes inspirados na estética anime.</p></div>
+          <div class="info"><h3>Streetwear</h3><p>Composições fortes, impactantes e pensadas para camisetas e marcas urbanas.</p></div>
         </div>
         <div class="reveal style-card">
           <div class="art" style="background-color:var(--surface); background-image:url('images/skull-desenho.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
-          <div class="info"><h3>Desenho</h3><p>Linhas e traçados com aparência desenhada à mão.</p></div>
+          <div class="info"><h3>Desenho</h3><p>Traços manuais, sketch, tinta, nanquim e hachuras para uma aparência realmente desenhada.</p></div>
         </div>
         <div class="reveal style-card">
-          <div class="art" style="background-color:var(--surface); background-image:url('images/eagle-fire-ilustracao.jpg'); background-size:cover; background-position:center;"></div>
+          <div class="art" style="background-color:var(--surface); background-image:url('images/samurai-anime.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
-          <div class="info"><h3>Ilustração</h3><p>Composições ilustrativas com cores vibrantes.</p></div>
+          <div class="info"><h3>Anime</h3><p>Estética anime/mangá, lineart marcante e composições dinâmicas.</p></div>
         </div>
         <div class="reveal style-card">
           <div class="art" style="background-color:var(--surface); background-image:url('images/tiger-3d.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
-          <div class="info"><h3>3D</h3><p>Volume e profundidade em renderização 3D.</p></div>
+          <div class="info"><h3>3D</h3><p>Renderização CGI com volume, materiais, profundidade e iluminação tridimensional.</p></div>
         </div>
         <div class="reveal style-card">
-          <div class="art" style="background-color:var(--surface); background-image:url('images/lotus-minimalista.jpg'); background-size:cover; background-position:center;"></div>
+          <div class="art" style="background-color:var(--surface); background-image:url('images/raven-galeria.jpg'); background-size:cover; background-position:center;"></div>
           <div class="scrim"></div>
-          <div class="info"><h3>Minimalista</h3><p>Formas simples e limpas, direto ao ponto.</p></div>
+          <div class="info"><h3>Grafite</h3><p>Spray, stencil, respingos, textura urbana e energia de street art.</p></div>
         </div>
       </div>
     </div>
@@ -506,6 +502,10 @@
           <div class="faq-a"><p>Não. Basta descrever o que você deseja.</p></div>
         </div>
         <div class="faq-item">
+          <button class="faq-q">Preciso escolher um estilo? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Não. O GereArtes começa no modo Automático, que interpreta sua ideia e escolhe a melhor direção visual. Se quiser, você também pode selecionar manualmente Streetwear, Desenho, Anime, 3D ou Grafite.</p></div>
+        </div>
+        <div class="faq-item">
           <button class="faq-q">Posso testar gratuitamente? <span class="plus">+</span></button>
           <div class="faq-a"><p>Sim. Ao criar sua conta você recebe 3 gerações gratuitas.</p></div>
         </div>
@@ -594,9 +594,9 @@
 
   // typing console effect
   const prompts = [
-    "lobo uivando para a lua, estilo realista, composição para camiseta",
+    "lobo uivando para a lua, composição para camiseta",
     "onça pintada em grafite urbano, cores vibrantes, fundo transparente",
-    "flor de lótus minimalista, linha única, para estampa frontal"
+    "flor de lótus em traço fino, para estampa frontal"
   ];
   const textEl = document.getElementById('typingText');
   let pIndex = 0, charIndex = 0, phase = 'typing';
